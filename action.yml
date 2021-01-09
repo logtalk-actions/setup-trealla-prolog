@@ -1,0 +1,17 @@
+name: Setup Trealla ProLog
+description: Installs the specified Trealla ProLog version
+inputs:
+  trealla-prolog-branch:
+    description: Trealla ProLog branch (master or devel)
+    required: false
+    default: devel
+  trealla-prolog-version:
+    description: Trealla ProLog version to install
+    required: true
+    default: latest
+runs:
+  using: 'node12'
+  main: 'src/setup-trealla-prolog.js'
+branding:
+  icon: 'box'
+  color: 'blue'
