@@ -19,6 +19,6 @@ async function main() {
 function checkPlatform() {
   if (process.platform == 'win32')
     throw new Error(
-      '@logtalk-actions/setup-logtalk does not support Windows at this time'
+      '@logtalk-actions/setup-trealla-prolog does not support Windows at this time'
     )
 }

@@ -10,5 +10,11 @@ module.exports = {installTreallaProlog}
  * @param {string} version
  */
 async function installTreallaProlog(branch,version) {
-  await exec(path.join(__dirname, 'install-trealla-prolog-ubuntu'), [branch,version])
+  if (process.platform == 'darwin') {
+    await exec(path.join(__dirname, 'install-trealla-prolog-darwin'), [])
+  } else if (process.platform == 'linux') {
+    await exec(path.join(__dirname, 'install-trealla-prolog-ubuntu'), [])
+  } else if (process.platform == 'win32') {
+    await exec(path.join(__dirname, 'install-trealla-prolog-windows'), [])
+  }
 }
