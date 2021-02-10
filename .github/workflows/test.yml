@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest]
+        operating-system: [macOS-latest, ubuntu-latest]
     steps:
       - name: Install Trealla ProLog
         uses: logtalk-actions/setup-trealla-prolog@master
