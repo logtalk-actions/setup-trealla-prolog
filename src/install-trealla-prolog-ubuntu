@@ -31,5 +31,8 @@ else
 	exit 1
 fi
 
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libreadline-dev
+
 make clean && make
 sudo ln -s "$PWD/tpl" /usr/local/bin/tpl
