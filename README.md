@@ -1,6 +1,6 @@
 # `setup-trealla-prolog`
 
-This actions sets up a SWI-Prolog environment for use in workflows.
+This actions sets up a Trealla Prolog environment for use in workflows.
 
 ![](https://github.com/logtalk-actions/setup-trealla-prolog/workflows/Test/badge.svg)
 
@@ -17,7 +17,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Trealla ProLog backend
+      - name: Install Trealla Prolog backend
         uses: logtalk-actions/setup-trealla-prolog@master
         with:
           trealla-prolog-branch: devel
@@ -42,4 +42,4 @@ This project is released under the [Apache License 2.0](LICENSE).
 
 ## Current Status
 
-This action is in active development. This action only supports Linux at this time.
+This action is in active development. This action does not support Windows at this time.

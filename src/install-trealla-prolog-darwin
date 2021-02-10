@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -eo pipefail
+
+branch=$1
+version=$2
+
+if [ "$branch" == "master" ] ; then
+	if [ "$version" == "latest" ] ; then
+		git clone https://github.com/infradig/trealla.git
+		cd trealla
+		git checkout master
+	else
+		git clone https://github.com/infradig/trealla.git
+		cd trealla
+		git fetch --all --tags
+		git checkout "$version"
+	fi
+elif [ "$branch" == "devel" ] ; then
+	if [ "$version" == "latest" ] ; then
+		git clone https://github.com/infradig/trealla.git
+		cd trealla
+		git checkout devel
+	else
+		git clone https://github.com/infradig/trealla.git
+		cd trealla
+		git fetch --all --tags
+		git checkout "$version"
+	fi
+else
+	exit 1
+fi
+
+make clean && make
+sudo ln -s "$PWD/tpl" /usr/local/bin/tpl

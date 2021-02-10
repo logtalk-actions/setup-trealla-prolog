@@ -1,14 +1,14 @@
 const {exec} = require('@actions/exec')
 const path = require('path')
 
-module.exports = {installTreallaProLog}
+module.exports = {installTreallaProlog}
 
 /**
- * Install Trealla ProLog.
+ * Install Trealla Prolog.
  *
  * @param {string} branch
  * @param {string} version
  */
-async function installTreallaProLog(branch,version) {
+async function installTreallaProlog(branch,version) {
   await exec(path.join(__dirname, 'install-trealla-prolog-ubuntu'), [branch,version])
 }
