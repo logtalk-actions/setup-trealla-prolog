@@ -5,6 +5,8 @@ set -eo pipefail
 branch=$1
 version=$2
 
+brew install coreutils
+
 if [ "$branch" == "master" ] ; then
 	if [ "$version" == "latest" ] ; then
 		git clone https://github.com/infradig/trealla.git
