@@ -8,7 +8,7 @@ version=$2
 brew install coreutils
 
 if [ "$branch" == "master" ] ; then
-	git https://github.com/trealla-prolog/trealla
+	git clone https://github.com/trealla-prolog/trealla
 	cd trealla
 	if [ "$version" == "latest" ] ; then
 		git checkout master
@@ -17,7 +17,7 @@ if [ "$branch" == "master" ] ; then
 		git checkout "$version"
 	fi
 elif [ "$branch" == "devel" ] ; then
-	git https://github.com/trealla-prolog/trealla
+	git clone https://github.com/trealla-prolog/trealla
 	cd trealla
 	if [ "$version" == "latest" ] ; then
 		git checkout devel
