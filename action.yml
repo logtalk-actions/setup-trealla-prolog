@@ -2,9 +2,9 @@ name: Setup Trealla Prolog
 description: Installs the specified Trealla Prolog version
 inputs:
   trealla-prolog-branch:
-    description: Trealla Prolog branch (master or devel)
+    description: Trealla Prolog branch (main)
     required: false
-    default: devel
+    default: main
   trealla-prolog-version:
     description: Trealla Prolog version to install
     required: true

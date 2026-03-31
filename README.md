@@ -6,7 +6,7 @@ This actions sets up a Trealla Prolog environment for use in workflows.
 
 ## Usage
 
-See [action.yml](action.yml) for the action metadata. The optional `trealla-prolog-branch` input parameter (`master` or `devel`; `devel` by default) allows selecting the branch. The required `trealla-prolog-version` input parameter specifies the version to be installed (`latest` or tag, e.g. `v1.4.7`; default is `latest`).
+See [action.yml](action.yml) for the action metadata. The optional `trealla-prolog-branch` input parameter (`main` or `devel`; `main` by default) allows selecting the branch. The required `trealla-prolog-version` input parameter specifies the version to be installed (`latest` or tag, e.g. `v1.4.7`; default is `latest`).
 
 ## Example
 
@@ -20,7 +20,7 @@ jobs:
       - name: Install Trealla Prolog backend
         uses: logtalk-actions/setup-trealla-prolog@master
         with:
-          trealla-prolog-branch: devel
+          trealla-prolog-branch: main
           trealla-prolog-version: latest
       - name: Install Logtalk
         uses: logtalk-actions/setup-logtalk@master

@@ -12,7 +12,7 @@ jobs:
       - name: Install Trealla ProLog
         uses: logtalk-actions/setup-trealla-prolog@master
         with:
-          trealla-prolog-branch: devel
+          trealla-prolog-branch: main
           trealla-prolog-version: latest
       - name: Run trivial sanity test
         run: tpl -g halt
