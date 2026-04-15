@@ -29,6 +29,7 @@ fi
 
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libreadline-dev
+sudo apt-get install -y libedit-dev
 
 make clean && make
 sudo ln -s "$PWD/tpl" /usr/local/bin/tpl

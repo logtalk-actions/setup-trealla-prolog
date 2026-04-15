@@ -37,5 +37,5 @@ brew install libffi
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/readline/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/readline/include"
 
-gmake clean && gmake NOLDLIBS=1 NOSSL=1
+gmake clean && gmake NOLDLIBS=1 NOSSL=1 READLINE=1
 sudo ln -s "$PWD/tpl" /usr/local/bin/tpl
